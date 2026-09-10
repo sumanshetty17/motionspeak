@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hand-gesture-detection
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: STREAMLIT_SERVER_HEADLESS
+        value: "true"
+      - key: PYTHONUNBUFFERED
+        value: "1"
